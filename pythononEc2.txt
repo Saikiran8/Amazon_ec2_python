@@ -48,3 +48,12 @@ source MYVENV/bin/activate
 python --version
 # Python 3.6.0
 
+Cloning Git repo to Amazon_ec2 using url
+
+git clone https://github.com/Saikiran8/Amazon_ec2_python.git  => http part is the url
+
+
+For the working of routes(which will be running on the localhost normally) on the webserver we need to use nginx web server here
+to install that in Amazon AMI we should
+$sudo amazon-linux-extras install nginx1
+
