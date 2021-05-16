@@ -57,3 +57,21 @@ For the working of routes(which will be running on the localhost normally) on th
 to install that in Amazon AMI we should
 $sudo amazon-linux-extras install nginx1
 
+#######################################################################
+
+Installation of mysql DB
+https://tecadmin.net/install-mysql-on-amazon-linux/#:~:text=Step%201%20%E2%80%93%20Install%20MySQL%20on,yum%20repository%20on%20your%20machine.&text=After%20that%20run%20the%20following,5.7%20packages%20on%20your%20systems.
+
+
+#####################################################################################################
+
+
+
+Install Node package forever at here https://www.npmjs.com/package/forever
+Then use
+
+forever start -c python your_script.py
+to start your script in the background. Later you can use
+
+forever stop your_script.py
+to stop the script
