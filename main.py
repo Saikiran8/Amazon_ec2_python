@@ -19,7 +19,7 @@ def home():
         cur.close()
     except Exception as e:
         print(e)
-    return '{"2":"'+str(fetchdata)+'"}'
+    return '{"2":"'+str(fetchdata[0][0])+'"}'
 @app.route('/led1')
 def ledOn():
     try:
@@ -30,6 +30,7 @@ def ledOn():
         cur.close()
     except Exception as e:
         print(e)
+    return "Changed to 1"
 @app.route('/led0')
 def ledOff():
     try:
@@ -40,6 +41,8 @@ def ledOff():
         cur.close()
     except Exception as e:
         print(e)
+    return "Changed to 0"
+
 @app.route('/getTemp')
 def pint():
     try:
