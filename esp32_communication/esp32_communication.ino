@@ -1,12 +1,11 @@
-#include <WiFi.h>
-#include <HTTPClient.h>
+#include <ESP8266WiFi.h>
+#include <ESP8266HTTPClient.h>
 #include <Arduino_JSON.h>
-
-const char* ssid = "SSID name";
-const char* password = "Pass";
+const char* ssid = "Ashok";
+const char* password = "12345678";
 
 //Your IP address or domain name with URL path
-const char* serverName = "http://13.233.111.102:8081/";
+char serverName[] = "http://13.233.111.102:8081/";
 
 // Update interval time set to 5 seconds
 const long interval = 3 ;
