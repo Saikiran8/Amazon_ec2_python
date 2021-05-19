@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home page</title>
+    <style>
+	.bg{
+		background-image: url("/static/home_bg.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.button {
+        position: absolute;
+        width: 150px;
+        height: 37px;
+        left: 64%;
+        background:none;
+        color:white ;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        font-family: 'Cabin', sans-serif;
+        margin: 4px 4px;
+        cursor: pointer;
+        padding: center;
+        line-height: 37px;
+      }
+      .button:hover {
+        background-color: #3fe0d0;
+        color: white;
+        border: 0px solid white;
+        box-sizing: border-box; 
+        border-radius: 10px;
+        }
+	.pic{
+      position: absolute;
+      width :1000px;
+      height:900px;
+      left: 1%;
+      top: -100px;
+    }
+  .logo{
+    position: absolute;
+    width: 180px;
+    height: 80px;
+    left: 5px;
+    top: 3px;
+  }
+	
+
+
+    </style>
+</head>
+
+<body class="bg">
+<div><img src="/static/img_home.svg" class="pic" alt="descrip"></div>
+<div><a href="/"><img src="/static/logo.png" class="logo" alt="logo"></a></div>
+<a href="/login/admin" class="button" style="top: 20px;left: 83%">Admin Login</a>
+<a href="/login/user" class="button" style="top: 20px;left: 70%">User Login</a>
+</body>
+</html>

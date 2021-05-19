@@ -1,0 +1,68 @@
+-> user has no restrictions to boards
+
+board table
+
+boardID
+measuredTemp
+setTemp
+batteryLevel
+lidStatus
+macAddress
+
+create table board(
+	boardID int AUTO_INCREMENT,
+	measuredTemp int,
+	setTemp int,
+	batteryLevel int,
+	lidStatus int,
+	macAddress varchar(33),
+	primary key(boardID)
+	);
+
+---------------------------
+user table
+
+userID 
+recentlyLoggedtym
+phno
+mailID
+password
+
+create table user(
+	userID int AUTO_INCREMENT primary key,
+	recentLogTym datetime,
+	phno varchar(13),
+	mailID varchar(40),
+	userPassword VARCHAR(33)
+	);
+
+-------------------------
+curntTemp(measured temperature history table)
+
+boardID(foreign key)
+tym
+temp
+
+create table curntTemp(
+	boardID int,
+	FOREIGN KEY (boardID) REFERENCES board(boardID),
+	tym datetime,
+	temp int
+	);
+------------------------------
+
+setTemp(set temperature history table)
+
+userID(foreign key)
+boardID(foreign key)
+tym
+temp
+
+create table setTemp(
+	userID int,
+	FOREIGN KEY (userID) REFERENCES user(userID),
+	boardID int,
+	FOREIGN KEY (boardID) REFERENCES board(boardID),
+	tym datetime,
+	temp int,
+);
