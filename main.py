@@ -57,4 +57,4 @@ def pint():
         print(e)
  #return render_template('home.html',data = fetchdata)
     return str(fetchdata)
-app.run()
+app.run("0.0.0.0",debug=False)
