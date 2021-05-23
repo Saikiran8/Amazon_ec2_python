@@ -11,6 +11,9 @@ app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 conn = mysql.connect()
 @app.route('/')
+def open():
+    return render_template("home.html")
+@app.route('/home')
 def home():
     try:
         cur = conn.cursor()
@@ -54,5 +57,4 @@ def pint():
         print(e)
  #return render_template('home.html',data = fetchdata)
     return str(fetchdata)
-if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=8081, debug=False)
+app.run()
