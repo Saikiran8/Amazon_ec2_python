@@ -5,7 +5,7 @@ const char* ssid = "Ashok";
 const char* password = "12345678";
 
 //Your IP address or domain name with URL path
-char serverName[] = "http://13.233.111.102:8081/";
+char serverName[] = "http://13.127.190.54:8080/";
 
 // Update interval time set to 5 seconds
 const long interval = 3 ;

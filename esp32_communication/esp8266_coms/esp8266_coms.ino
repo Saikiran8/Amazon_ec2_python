@@ -6,11 +6,11 @@
 #include <ESP8266WiFiMulti.h>
 ESP8266WiFiMulti WiFiMulti;
 
-const char* ssid = "Ashok";
-const char* password = "12345678";
+char ssid[] = "Redmi Note 7";
+char password[] = "saiki456";
 
 // Your IP address or domain name with URL path
-const char* serverName = "http://65.2.29.223:8081/";
+const char* serverName = "http://13.127.190.54:8080/";
 
 // Update interval time set to 5 seconds
 const long interval = 5000;
@@ -23,7 +23,7 @@ void setup() {
   
   WiFi.mode(WIFI_STA);
   WiFiMulti.addAP(ssid, password);
-  while((WiFiMulti.run() == WL_CONNECTED)) { 
+  while((WiFiMulti.run() != WL_CONNECTED)) { 
     delay(500);
     Serial.print(".");
   }
@@ -60,7 +60,7 @@ void loop() {
         Serial.print(" - SET to: ");
         Serial.println(value);
         pinMode(atoi(keys[i]), OUTPUT);
-        digitalWrite(atoi(keys[i]), atoi(value));
+        digitalWrite(atoi(keys[i]), !atoi(value));
       }
       // save the last HTTP GET Request
       previousMillis = currentMillis;
